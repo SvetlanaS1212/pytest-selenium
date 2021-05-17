@@ -35,11 +35,11 @@ def test_search():
     # Wait is implicit (see setup_function)
 
     # Take 1st result url
-    elem = self.driver.find_element_by_css_selector("#r1-0 a.result__a")
+    elem = self.driver.find_element_by_css_selector('.results--main #links #r1-0.result .links_main a.result__url')
     href = elem.get_attribute("href")
 
     # Check the result
-    assert href == "https://en.wikipedia.org/wiki/Selenium"
+    assert href == "https://www.selenium.dev/"
 
     pass
 
